@@ -26,7 +26,7 @@ int main (){
 	}
 	fscanf (fp, "%s", word);
 	fclose (fp);
-	
+	clear_array (6, CLUE_CAP, clues);
 	do {	
 		get_guess (guess, STR_CAP, guesses);
 		
@@ -34,7 +34,7 @@ int main (){
 		// check if guess is correct 
 		// display previous guesses and clues (if incorrect) OR  display winning message if correct
 		
-		clear_array (6, CLUE_CAP, clues);
+		
 		
 		correctGuess = check_guess (guess, STR_CAP, guesses, word, clues);
 		switch (correctGuess){
